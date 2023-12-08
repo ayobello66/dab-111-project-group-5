@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <style>
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name </th>
+                <th>Club </th>
+                <th>Position </th>
+                <th>Goals </th>
+                <th>Right Foot</th> 
+                <th>Left Foot </th>
+                <th>Headers </th>
+                <th>Others </th>
+                <th>Inside Area </th>
+                <th>Outside Area </th>
+                <th>Penalties </th>
+                <th>Matches Played </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in goal_table %}
+            <tr>
+                <td>{{ s[0] }}</td>
+                <td>{{ s[1] }}</td>
+                <td>{{ s[2] }}</td>
+                <td>{{ s[3] }}</td>
+                <td>{{ s[4] }}</td>
+                <td>{{ s[5] }}</td>
+                <td>{{ s[6] }}</td>
+                <td>{{ s[7] }}</td>
+                <td>{{ s[8] }}</td>
+                <td>{{ s[9] }}</td>
+                <td>{{ s[10] }}</td>
+                <td>{{ s[11] }}</td>
+                <td>{{ s[12] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
